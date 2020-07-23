@@ -64,7 +64,7 @@ def main():
 	# B
 	change_color.blue().set_text("10")
 	# Ok
-	(change_color.apply()).click()
+	change_color.apply().click()
 	# Заливка
 	delta.choice_fill().invoke()
 	time.sleep(1)
