@@ -14,6 +14,7 @@ def main():
 	app_init = Paint()
 	main_init = app_init.ribbon()
 	tool_bar = main_init.tool()
+
 	# Ластик
 	tool_bar.eraser().click()
 	time.sleep(2)
@@ -45,9 +46,11 @@ def main():
 	# Треугольник
 	delta = main_init.figure()
 	delta.delta().invoke()
+
 	# Выбор второго цвета
 	color_init = main_init.color()
 	color_init.color_two().click()
+
 	# Цвет
 	color_init.change_color().invoke()
 	change_color = app_init.color_changing_dialog()
@@ -65,11 +68,15 @@ def main():
 	change_color.blue().set_text("10")
 	# Ok
 	change_color.apply().click()
+
 	# Заливка
 	delta.choice_fill().invoke()
 	time.sleep(1)
+	# Работа с клавиатурой
 	send_keys("{VK_DOWN}")
 	send_keys("{ENTER}")
+
+	# Нанесение треугольника
 	main_init.grab()
 	time.sleep(2)
 
